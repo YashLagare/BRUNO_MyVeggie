@@ -1,0 +1,27 @@
+meta {
+  name: Update User
+  type: http
+  seq: 8
+}
+
+put {
+  url: http://127.0.0.1:8000/api/v1/users/update/?user_id=5
+  body: formUrlEncoded
+  auth: inherit
+}
+
+params:query {
+  user_id: 5
+}
+
+body:form-urlencoded {
+  name: VidyaRani
+  email: vidya123@gmail.com
+  contact: 1234123456
+  password: 12345678
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
