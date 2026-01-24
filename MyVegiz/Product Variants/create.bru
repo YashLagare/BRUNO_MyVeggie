@@ -1,0 +1,49 @@
+meta {
+  name: create
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://127.0.0.1:8000/api/v1/product-variants/bulk-create
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjo0LCJlbWFpbCI6ImdhdXJpMTl0YW51Z2FkZUBnbWFpbC5jb20iLCJleHAiOjE3NjkyNDYzMzB9.tOIY0xHBJGl21NQ7g0jaQ7D2QxBBF70ZdCfzgdxL3b4
+}
+
+body:json {
+  {
+    "product_id": 20,
+    "variants": [
+      {
+        "zone_id": 7,
+  //       "uom_id": 2,
+        "actual_price": 120,
+        "selling_price": 100
+      },
+      {
+  //       "zone_id": 8,
+        "uom_id": 2,
+        "actual_price": 130,
+        "selling_price": 110
+      }  
+    ]
+  }
+  
+}
+
+body:multipart-form {
+  product_id: 2
+  uom_id: 2
+  zone_id: 9
+  actual_price: 120.50
+  selling_price: 99.99
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

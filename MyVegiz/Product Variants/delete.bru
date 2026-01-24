@@ -1,0 +1,24 @@
+meta {
+  name: delete
+  type: http
+  seq: 4
+}
+
+delete {
+  url: http://127.0.0.1:8000/api/v1/product-variants/delete?uu_id=aabbcaa6-2e1b-43b7-88dd-eddd7c589e4d
+  body: json
+  auth: bearer
+}
+
+params:query {
+  uu_id: aabbcaa6-2e1b-43b7-88dd-eddd7c589e4d
+}
+
+auth:bearer {
+  token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjo0LCJlbWFpbCI6ImdhdXJpMTl0YW51Z2FkZUBnbWFpbC5jb20iLCJleHAiOjE3NjkyNTczOTR9.L3-QOVtbK_ZhX_5vBYrwPnmZ1eXEiuGSkaaQfHtf0bE
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

@@ -1,0 +1,33 @@
+meta {
+  name: update
+  type: http
+  seq: 3
+}
+
+put {
+  url: http://127.0.0.1:8000/api/v1/product-variants/update?uu_id
+  body: json
+  auth: bearer
+}
+
+params:query {
+  uu_id: 
+}
+
+auth:bearer {
+  token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjo0LCJlbWFpbCI6ImdhdXJpMTl0YW51Z2FkZUBnbWFpbC5jb20iLCJleHAiOjE3NjkyNTczOTR9.L3-QOVtbK_ZhX_5vBYrwPnmZ1eXEiuGSkaaQfHtf0bE
+}
+
+body:json {
+  {
+    "actual_price": 150,
+    "selling_price": 130,
+    "is_active": false
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

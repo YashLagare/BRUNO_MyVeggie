@@ -1,0 +1,20 @@
+meta {
+  name: list (1)
+  type: http
+  seq: 5
+}
+
+get {
+  url: http://127.0.0.1:8000/api/v1/zone/list
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjo0LCJlbWFpbCI6ImdhdXJpMTl0YW51Z2FkZUBnbWFpbC5jb20iLCJleHAiOjE3NjkxNTA0ODB9.SIbjkwQtuVQKsA4_JVvskWzKBBt58Ya8F38HqNMA40o
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
