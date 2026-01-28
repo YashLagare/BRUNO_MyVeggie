@@ -1,0 +1,32 @@
+meta {
+  name: update
+  type: http
+  seq: 3
+}
+
+put {
+  url: http://localhost:8000/api/v1/admin/slider/update?slider_id=1
+  body: multipartForm
+  auth: bearer
+}
+
+params:query {
+  slider_id: 1
+}
+
+auth:bearer {
+  token: {{access_token}}
+}
+
+body:multipart-form {
+  caption: Home banner
+  is_active: true
+  mobile_image: @file(C:\Users\Admin\Downloads\shrutika.png)
+  tab_image: @file(C:\Users\Admin\Downloads\ana.png)
+  web_image: @file(C:\Users\Admin\Downloads\shruti1.png)
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

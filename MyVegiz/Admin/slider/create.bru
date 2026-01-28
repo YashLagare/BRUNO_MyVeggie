@@ -1,0 +1,27 @@
+meta {
+  name: create
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://localhost:8000/api/v1/admin/slider/create
+  body: multipartForm
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{access_token}}
+}
+
+body:multipart-form {
+  caption: Dashboard banner
+  mobile_image: @file(C:\Users\Admin\Downloads\shrutika.png)
+  tab_image: @file(C:\Users\Admin\Downloads\shruti123.jpg)
+  web_image: @file(C:\Users\Admin\Downloads\ana.png)
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
