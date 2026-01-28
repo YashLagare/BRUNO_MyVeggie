@@ -6,7 +6,7 @@ meta {
 
 post {
   url: http://127.0.0.1:8000/api/v1/admin/users/create
-  body: formUrlEncoded
+  body: multipartForm
   auth: bearer
 }
 
@@ -15,10 +15,19 @@ auth:bearer {
 }
 
 body:form-urlencoded {
-  name: Reshma
-  email: reshma@gmail.com
-  contact: 1234123459
+  name: Laxman
+  email: Laxman@gmail.com
+  contact: 1234126547
   password: 12345678
+  : 
+}
+
+body:multipart-form {
+  name: Laxman
+  email: laxman@gmail.com
+  contact: 1234126547
+  password: 12345678
+  profile_image: @file(C:\Users\Admin\Downloads\icon_100.png)
 }
 
 settings {
