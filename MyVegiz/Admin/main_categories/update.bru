@@ -1,21 +1,26 @@
 meta {
   name: update
   type: http
-  seq: 2
+  seq: 3
 }
 
-post {
-  url: http://127.0.0.1:8000/api/v1/admin/main-categories/create
+get {
+  url: {{base_url}}admin/main-categories/update?uu_id=647b3b11-7027-4dd5-ae0d-c22839c19871
   body: multipartForm
   auth: bearer
 }
 
+params:query {
+  uu_id: 647b3b11-7027-4dd5-ae0d-c22839c19871
+}
+
 auth:bearer {
-  token: {{access_token}}
+  token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjozLCJlbWFpbCI6InNocnV0aUBnbWFpbC5jb20iLCJuYW1lIjoic2hydXRpIFBhdGlsIiwiY29udGFjdCI6Ijc4NjU0MzU0NjciLCJwcm9maWxlX2ltYWdlIjoiaHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vZG9pYml1bWd1L2ltYWdlL3VwbG9hZC92MTc2ODYzNjE1Mi9teXZlZ2l6L3VzZXJzL2huNGxlcHRuY2Q0NnlxdGlrZ2J5LmpwZyIsImV4cCI6MTc2OTU5MDM5NX0.GIy3zsTFpzpxbaZUziQNWfSf5mizmsbLzFrxck3hlLw
 }
 
 body:multipart-form {
-  main_category_name: Vegetables
+  main_category_image: @file(C:\Users\91862\Downloads\R.png)
+  ~main_category_name: Vegetables
 }
 
 settings {
