@@ -1,13 +1,17 @@
 meta {
   name: update
   type: http
-  seq: 2
+  seq: 3
 }
 
-post {
-  url: http://127.0.0.1:8000/api/v1/admin/main-categories/create
+put {
+  url: {{base_url}}admin/main-categories/update?uu_id=647b3b11-7027-4dd5-ae0d-c22839c19871
   body: multipartForm
   auth: bearer
+}
+
+params:query {
+  uu_id: 647b3b11-7027-4dd5-ae0d-c22839c19871
 }
 
 auth:bearer {
@@ -15,7 +19,8 @@ auth:bearer {
 }
 
 body:multipart-form {
-  main_category_name: Vegetables
+  main_category_image: @file(C:\Users\91862\Downloads\R.png)
+  ~main_category_name: Vegetables
 }
 
 settings {

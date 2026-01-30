@@ -1,0 +1,24 @@
+meta {
+  name: registration-otp-verify
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{base_url}}web/auth/register/verify-otp
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "mobile": "8790876543",
+    "otp":"123456"
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
