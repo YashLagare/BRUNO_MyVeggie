@@ -5,13 +5,13 @@ meta {
 }
 
 put {
-  url: http://127.0.0.1:8000/api/v1/admin/products/update?uu_id=822dd412-e09e-4ee2-8e39-d70bce1a3959
+  url: http://127.0.0.1:8000/api/v1/admin/products/update?uu_id=38005962-c6d6-4674-a0ad-45c0780b1810
   body: multipartForm
   auth: bearer
 }
 
 params:query {
-  uu_id: 822dd412-e09e-4ee2-8e39-d70bce1a3959
+  uu_id: 38005962-c6d6-4674-a0ad-45c0780b1810
 }
 
 auth:bearer {
@@ -19,10 +19,11 @@ auth:bearer {
 }
 
 body:multipart-form {
-  category_id: 5
-  product_name: Paneer Chingari
-  product_short_name: paneer
-  ~product_image: 
+  product_image: @file(C:\Users\91862\Downloads\R.jpg)
+  ~is_active: false
+  ~category_id: 5
+  ~product_name: Paneer Chingari
+  ~product_short_name: paneer
 }
 
 settings {
