@@ -5,13 +5,13 @@ meta {
 }
 
 put {
-  url: http://127.0.0.1:8000/api/v1/admin/products/update?uu_id=38005962-c6d6-4674-a0ad-45c0780b1810
+  url: http://127.0.0.1:8000/api/v1/admin/products/update?uu_id=7b2dd3c2-b5b4-42a7-bcac-2b4af45db401
   body: multipartForm
   auth: bearer
 }
 
 params:query {
-  uu_id: 38005962-c6d6-4674-a0ad-45c0780b1810
+  uu_id: 7b2dd3c2-b5b4-42a7-bcac-2b4af45db401
 }
 
 auth:bearer {
@@ -19,8 +19,10 @@ auth:bearer {
 }
 
 body:multipart-form {
-  product_image: @file(C:\Users\91862\Downloads\R.jpg)
-  ~is_active: false
+  is_active: true
+  ~images: @file(C:\Users\91862\Downloads\R.jpg)
+  ~images: @file(C:\Users\91862\Downloads\1000_F_139743534_Sg2CP2r3T8D5jOXML7FsFFDbGPCS2suK.jpg)
+  ~product_image: @file(C:\Users\91862\Downloads\R.jpg)
   ~category_id: 5
   ~product_name: Paneer Chingari
   ~product_short_name: paneer
