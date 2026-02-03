@@ -5,13 +5,21 @@ meta {
 }
 
 put {
+<<<<<<< HEAD
   url: http://127.0.0.1:8000/api/v1/admin/products/update?uu_id=4f680bea-4298-493d-8cae-95915b2d484b
+=======
+  url: http://127.0.0.1:8000/api/v1/admin/products/update?uu_id=7b2dd3c2-b5b4-42a7-bcac-2b4af45db401
+>>>>>>> e76b2ac0e425386790ce13adeee9eccf69fca95b
   body: multipartForm
   auth: bearer
 }
 
 params:query {
+<<<<<<< HEAD
   uu_id: 4f680bea-4298-493d-8cae-95915b2d484b
+=======
+  uu_id: 7b2dd3c2-b5b4-42a7-bcac-2b4af45db401
+>>>>>>> e76b2ac0e425386790ce13adeee9eccf69fca95b
 }
 
 auth:bearer {
@@ -19,12 +27,22 @@ auth:bearer {
 }
 
 body:multipart-form {
+<<<<<<< HEAD
   category_id: 29
   product_name: corn
   product_short_name: corn
   images: @file(C:\Users\Admin\Downloads\corn.png)
   ~: 
   ~: 
+=======
+  is_active: true
+  ~images: @file(C:\Users\91862\Downloads\R.jpg)
+  ~images: @file(C:\Users\91862\Downloads\1000_F_139743534_Sg2CP2r3T8D5jOXML7FsFFDbGPCS2suK.jpg)
+  ~product_image: @file(C:\Users\91862\Downloads\R.jpg)
+  ~category_id: 5
+  ~product_name: Paneer Chingari
+  ~product_short_name: paneer
+>>>>>>> e76b2ac0e425386790ce13adeee9eccf69fca95b
 }
 
 settings {
