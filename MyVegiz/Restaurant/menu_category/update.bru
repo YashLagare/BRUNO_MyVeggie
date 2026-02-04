@@ -4,15 +4,18 @@ meta {
   seq: 3
 }
 
-post {
-  url: {{base_url2}}/restaurant/menucategory/create?menu_id&menu_category=Starters
-  body: none
+put {
+  url: {{base_url2}}/restaurant/menucategory/update?uu_id=21fd6f0d-a54a-4a5c-aec4-dc58c5c6e761
+  body: multipartForm
   auth: inherit
 }
 
 params:query {
-  menu_id: 
-  menu_category: Starters
+  uu_id: 21fd6f0d-a54a-4a5c-aec4-dc58c5c6e761
+}
+
+body:multipart-form {
+  is_active: true
 }
 
 settings {

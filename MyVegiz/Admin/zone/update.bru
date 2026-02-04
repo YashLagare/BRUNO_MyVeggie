@@ -5,13 +5,13 @@ meta {
 }
 
 put {
-  url: http://127.0.0.1:8000/api/v1/admin/zone/update?zone_id=1
+  url: http://127.0.0.1:8000/api/v1/admin/zone/update?zone_id=11
   body: multipartForm
   auth: bearer
 }
 
 params:query {
-  zone_id: 1
+  zone_id: 11
 }
 
 auth:bearer {
@@ -21,13 +21,15 @@ auth:bearer {
 body:multipart-form {
   polygon: '''
     [
-      {"lat":23.0225,"lng":72.5714},
-      {"lat":23.0230,"lng":72.5800},
-      {"lat":23.0180,"lng":72.5820}
+      {"lat":22.575200,"lng":88.367000},
+      {"lat":22.573800,"lng":88.369200},
+      {"lat":22.571900,"lng":88.366900},
+      {"lat":22.572500,"lng":88.363700}
     ]
+    
   '''
   is_deliverable: true
-  ~zone_name: South Ahmedabad
+  zone_name: Central Kolkata
   ~city: Ahmedabad
   ~state: Gujarat
 }

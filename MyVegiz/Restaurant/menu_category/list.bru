@@ -4,15 +4,15 @@ meta {
   seq: 2
 }
 
-post {
-  url: {{base_url2}}/restaurant/menucategory/create
+get {
+  url: {{base_url2}}/restaurant/menucategory/list?page=1&limit=10
   body: none
   auth: inherit
 }
 
 params:query {
-  ~menu_id: 
-  ~menu_category: Starters
+  page: 1
+  limit: 10
 }
 
 settings {
