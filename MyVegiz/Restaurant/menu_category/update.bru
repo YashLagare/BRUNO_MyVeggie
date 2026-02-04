@@ -1,0 +1,24 @@
+meta {
+  name: update
+  type: http
+  seq: 3
+}
+
+put {
+  url: {{base_url2}}/restaurant/menucategory/update?uu_id=21fd6f0d-a54a-4a5c-aec4-dc58c5c6e761
+  body: multipartForm
+  auth: inherit
+}
+
+params:query {
+  uu_id: 21fd6f0d-a54a-4a5c-aec4-dc58c5c6e761
+}
+
+body:multipart-form {
+  is_active: true
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
