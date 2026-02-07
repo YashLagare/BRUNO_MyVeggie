@@ -5,12 +5,13 @@ meta {
 }
 
 get {
-  url: {{base_url2}}/admin/products/list?page=1&limit=10
+  url: {{base_url2}}/admin/products/list?q=Banana&page=1&limit=10
   body: none
   auth: bearer
 }
 
 params:query {
+  q: Banana
   page: 1
   limit: 10
 }
