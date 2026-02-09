@@ -5,13 +5,13 @@ meta {
 }
 
 put {
-  url: http://127.0.0.1:8000/api/v1/admin/zone/update?zone_id=7
+  url: http://127.0.0.1:8000/api/v1/admin/zone/update?zone_id=13
   body: multipartForm
   auth: bearer
 }
 
 params:query {
-  zone_id: 7
+  zone_id: 13
 }
 
 auth:bearer {
@@ -19,34 +19,12 @@ auth:bearer {
 }
 
 body:multipart-form {
-  polygon: '''
-    [
-        {
-            "lat": 16.71010046182489,
-            "lng": 74.2505719598274
-        },
-        {
-            "lat": 16.714621750085193,
-            "lng": 74.24915575346753
-        },
-        {
-            "lat": 16.709566120680023,
-            "lng": 74.24434923491285
-        },
-        {
-            "lat": 16.70648335409585,
-            "lng": 74.24366258940503
-        },
-        {
-            "lat": 16.70640114630542,
-            "lng": 74.24851202330396
-        }
-    ]
-  '''
+  polygon: [{"lat": 16.72270925476816, "lng": 74.23537410240672}, {"lat": 16.719174588388693, "lng": 74.23039592247508}, {"lat": 16.713009315860255, "lng": 74.23134006004832}, {"lat": 16.706761636493475, "lng": 74.23408664207957}, {"lat": 16.709638882659657, "lng": 74.23829234581493}, {"lat": 16.715722060318427, "lng": 74.24309886436961}, {"lat": 16.721229634952913, "lng": 74.24189723473094}]
   is_deliverable: true
-  zone_name: Tarabai park
-  ~city: Ahmedabad
-  ~state: Gujarat
+  zone_name: Vivekanand
+  city: Kolhapur
+  state: Maharashtra
+  is_active: false
 }
 
 settings {

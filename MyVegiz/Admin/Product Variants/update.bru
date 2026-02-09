@@ -5,13 +5,13 @@ meta {
 }
 
 put {
-  url: http://127.0.0.1:8000/api/v1/admin/product-variants/update?uu_id=5d842b80-8aea-43a1-a45d-5112fd8cfb33
+  url: http://127.0.0.1:8000/api/v1/admin/product-variants/update?uu_id=f96569d3-e295-47e9-be27-491892ff209e
   body: json
   auth: bearer
 }
 
 params:query {
-  uu_id: 5d842b80-8aea-43a1-a45d-5112fd8cfb33
+  uu_id: f96569d3-e295-47e9-be27-491892ff209e
 }
 
 auth:bearer {
@@ -20,6 +20,7 @@ auth:bearer {
 
 body:json {
   {
+    "quantity":3,
     "actual_price": 10,
     "selling_price": 8,
     "is_active": true,

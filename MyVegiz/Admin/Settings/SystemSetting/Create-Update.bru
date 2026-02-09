@@ -1,0 +1,30 @@
+meta {
+  name: Create/Update
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{base_url2}}/admin/system_settings/save
+  body: multipartForm
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{access_token}}
+}
+
+body:multipart-form {
+  app_maintenance: false
+  playstore_version: 1.0.6
+  playstore_forceupdate: true
+  playstore_updatemessage: Android Update
+  ios_version: 2.0.2
+  ios_forceupdate: true
+  ios_updatemessage: Please update
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

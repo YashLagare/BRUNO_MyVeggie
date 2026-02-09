@@ -1,19 +1,13 @@
 meta {
-  name: User List
+  name: List
   type: http
   seq: 1
 }
 
 get {
-  url: http://127.0.0.1:8000/api/v1/admin/users/list?q=anu&page=1&limit=10
+  url: {{base_url2}}/admin/system_settings/list
   body: none
   auth: bearer
-}
-
-params:query {
-  q: anu
-  page: 1
-  limit: 10
 }
 
 auth:bearer {
