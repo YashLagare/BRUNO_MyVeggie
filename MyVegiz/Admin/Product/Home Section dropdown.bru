@@ -1,0 +1,20 @@
+meta {
+  name: Home Section dropdown
+  type: http
+  seq: 7
+}
+
+get {
+  url: http://127.0.0.1:8000/api/v1/admin/products/dropdown-home-section
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{access_token}}
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
