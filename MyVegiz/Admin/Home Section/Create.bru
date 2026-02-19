@@ -1,0 +1,33 @@
+meta {
+  name: Create
+  type: http
+  seq: 2
+}
+
+post {
+  url: http://127.0.0.1:8000/api/v1/admin/home_sections/create
+  body: multipartForm
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{access_token}}
+}
+
+body:form-urlencoded {
+  category_name: restaurant
+  category_image: 
+}
+
+body:multipart-form {
+  hometab_id: 1
+  title: xyz
+  section_type: category_list
+  description: home section xyz
+  ~priority: 2
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

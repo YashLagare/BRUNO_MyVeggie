@@ -1,0 +1,33 @@
+meta {
+  name: Update
+  type: http
+  seq: 3
+}
+
+put {
+  url: http://127.0.0.1:8000/api/v1/admin/home_sections/update?uu_id=4143a003-0ba4-4836-a86f-9feefff7597e
+  body: multipartForm
+  auth: bearer
+}
+
+params:query {
+  uu_id: 4143a003-0ba4-4836-a86f-9feefff7597e
+}
+
+auth:bearer {
+  token: {{access_token}}
+}
+
+body:multipart-form {
+  hometab_id: 3
+  title: xyz
+  section_type: banner
+  description: home section for xyz
+  priority: 4
+  is_active: true
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
