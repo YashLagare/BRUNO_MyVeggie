@@ -1,0 +1,33 @@
+meta {
+  name: Create
+  type: http
+  seq: 2
+}
+
+post {
+  url: http://127.0.0.1:8000/api/v1/admin/home_tabs/create
+  body: multipartForm
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{access_token}}
+}
+
+body:form-urlencoded {
+  category_name: restaurant
+  category_image: 
+}
+
+body:multipart-form {
+  tab_name: dairy
+  home_icon: @file(C:\Users\Admin\Downloads\profile_default.jpg)
+  main_category_id: 16
+  priority: 2
+  ~: @file()
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

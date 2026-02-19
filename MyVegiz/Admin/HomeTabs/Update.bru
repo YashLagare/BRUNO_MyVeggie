@@ -1,0 +1,31 @@
+meta {
+  name: Update
+  type: http
+  seq: 3
+}
+
+put {
+  url: http://127.0.0.1:8000/api/v1/admin/home_tabs/update?uu_id=29f4757b-16cc-4885-b287-185df07f782a
+  body: multipartForm
+  auth: bearer
+}
+
+params:query {
+  uu_id: 29f4757b-16cc-4885-b287-185df07f782a
+}
+
+auth:bearer {
+  token: {{access_token}}
+}
+
+body:multipart-form {
+  tab_name: vegy vegy
+  home_icon: @file(C:\Users\Admin\Downloads\image_500_hw.jpg)
+  main_category_id: 16
+  priority: 2
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
