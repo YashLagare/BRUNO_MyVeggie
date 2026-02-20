@@ -1,0 +1,31 @@
+meta {
+  name: Update
+  type: http
+  seq: 3
+}
+
+put {
+  url: http://127.0.0.1:8000/api/v1/admin/banner/update?uu_id=b46c61e1-b305-41e1-9579-479bd9c0cbc2
+  body: multipartForm
+  auth: bearer
+}
+
+params:query {
+  uu_id: b46c61e1-b305-41e1-9579-479bd9c0cbc2
+}
+
+auth:bearer {
+  token: {{access_token}}
+}
+
+body:multipart-form {
+  title: banners 3
+  home_section_id: 5
+  product_id: 82
+  image: @file(C:\Users\Admin\Downloads\image3.png)
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

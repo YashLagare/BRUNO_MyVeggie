@@ -1,0 +1,32 @@
+meta {
+  name: Add
+  type: http
+  seq: 2
+}
+
+post {
+  url: http://127.0.0.1:8000/api/v1/admin/banner/create
+  body: multipartForm
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{access_token}}
+}
+
+body:form-urlencoded {
+  category_name: restaurant
+  category_image: 
+}
+
+body:multipart-form {
+  title: banner 3
+  image: @file(C:\Users\Admin\Downloads\same_height_width.png)
+  home_section_id: 5
+  product_id: 82
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
