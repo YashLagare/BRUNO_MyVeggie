@@ -5,13 +5,13 @@ meta {
 }
 
 put {
-  url: http://127.0.0.1:8000/api/v1/admin/products/update?uu_id=f0f32cd9-b199-405f-8647-145d9c493e6d
+  url: http://127.0.0.1:8000/api/v1/admin/products/update?uu_id=ac6a17b3-e3fa-44d2-9ed0-c0df52cbd7ea
   body: multipartForm
   auth: bearer
 }
 
 params:query {
-  uu_id: f0f32cd9-b199-405f-8647-145d9c493e6d
+  uu_id: ac6a17b3-e3fa-44d2-9ed0-c0df52cbd7ea
 }
 
 auth:bearer {
@@ -19,7 +19,10 @@ auth:bearer {
 }
 
 body:multipart-form {
-  product_name: Fresh aab
+  product_name: Fresh hdfggg
+  home_section_id: 4
+  category_id: 33
+  sub_category_id: 26
   ~removed_image_ids: 90
   ~images: @file(C:\Users\91862\Downloads\R.png)
   ~images: @file(C:\Users\91862\Downloads\apples-6751473_1280.jpg)
