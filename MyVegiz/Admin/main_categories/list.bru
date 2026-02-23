@@ -5,15 +5,15 @@ meta {
 }
 
 get {
-  url: {{base_url2}}/admin/main-categories/list?q=capsicums&page =2&limit=10
+  url: {{base_url2}}/admin/main-categories/list?page =2&limit=10
   body: none
   auth: bearer
 }
 
 params:query {
-  q: capsicums
   "page ": 2
   limit: 10
+  ~q: capsicums
 }
 
 auth:bearer {

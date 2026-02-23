@@ -5,7 +5,7 @@ meta {
 }
 
 get {
-  url: {{base_url2}}/web/categories/bysection?page=1&limit=10&home_section_slug=festival-special-sweets
+  url: {{base_url2}}/web/sub_categories/by-category?page=1&limit=10&category_slug=diwali-special-sweets
   body: none
   auth: inherit
 }
@@ -13,7 +13,7 @@ get {
 params:query {
   page: 1
   limit: 10
-  home_section_slug: festival-special-sweets
+  category_slug: diwali-special-sweets
   ~main_category_id: 13
 }
 

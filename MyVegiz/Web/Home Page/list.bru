@@ -1,0 +1,22 @@
+meta {
+  name: list
+  type: http
+  seq: 1
+}
+
+get {
+  url: http://127.0.0.1:8000/api/v1/web/homepage?main_category_slug=grocery
+  body: none
+  auth: inherit
+}
+
+params:query {
+  main_category_slug: grocery
+  ~page: 1
+  ~limit: 10
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

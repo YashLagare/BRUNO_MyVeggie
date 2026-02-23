@@ -1,0 +1,22 @@
+meta {
+  name: list
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{base_url2}}/web/banners/by-section?page=1&limit=10&home_section_slug=festival-sweets-banner
+  body: none
+  auth: inherit
+}
+
+params:query {
+  page: 1
+  limit: 10
+  home_section_slug: festival-sweets-banner
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

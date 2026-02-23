@@ -1,0 +1,22 @@
+meta {
+  name: list
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{base_url2}}/web/home_tabs/list?page=1&limit=10&main_category_slug=food
+  body: none
+  auth: inherit
+}
+
+params:query {
+  page: 1
+  limit: 10
+  main_category_slug: food
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
