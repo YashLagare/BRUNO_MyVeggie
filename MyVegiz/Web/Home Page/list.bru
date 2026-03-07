@@ -5,14 +5,20 @@ meta {
 }
 
 get {
-  url: http://127.0.0.1:8000/api/v1/web/homepage?main_category_slug=grocery-vegetables&home_tab_slug=dry-fruits
+  url: http://127.0.0.1:8000/api/v1/web/homepage/?main_category_slug=grocery-vegetables&home_tab_slug=fruitsss&lat=16.695083374702104&lng=74.20434800272267
   body: none
-  auth: inherit
+  auth: bearer
 }
 
 params:query {
   main_category_slug: grocery-vegetables
-  home_tab_slug: dry-fruits
+  home_tab_slug: fruitsss
+  lat: 16.695083374702104
+  lng: 74.20434800272267
+}
+
+auth:bearer {
+  token: {{web_access_token}}
 }
 
 settings {
