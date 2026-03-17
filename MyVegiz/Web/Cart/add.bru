@@ -5,7 +5,7 @@ meta {
 }
 
 post {
-  url: http://127.0.0.1:8000/api/v1/web/cart/add
+  url: {{base_url2}}/web/cart/add
   body: json
   auth: bearer
 }
@@ -21,8 +21,8 @@ auth:bearer {
 
 body:json {
   {
-    "product_variant_id": 28,
-    "quantity": 3,
+    "product_variant_id": 30,
+    "quantity": 1,
     "lat": 16.695083374702104,
     "lng": 74.20434800272267
   }
