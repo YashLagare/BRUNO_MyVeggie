@@ -1,0 +1,24 @@
+meta {
+  name: Delete
+  type: http
+  seq: 4
+}
+
+delete {
+  url: http://127.0.0.1:8001/api/v1/admin/sub_uom/delete?uu_id=510e307c-fa36-4288-bb43-e99393281425
+  body: none
+  auth: bearer
+}
+
+params:query {
+  uu_id: 510e307c-fa36-4288-bb43-e99393281425
+}
+
+auth:bearer {
+  token: {{access_token}}
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

@@ -1,0 +1,27 @@
+meta {
+  name: Add
+  type: http
+  seq: 2
+}
+
+post {
+  url: http://127.0.0.1:8001/api/v1/admin/sub_uom/create
+  body: formUrlEncoded
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{access_token}}
+}
+
+body:form-urlencoded {
+  uom_id: 2
+  sub_uom_name: demo
+  sub_uom_short_name: demo
+  conversion_factor: 2
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

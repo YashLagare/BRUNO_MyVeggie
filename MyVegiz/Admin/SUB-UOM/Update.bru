@@ -1,0 +1,33 @@
+meta {
+  name: Update
+  type: http
+  seq: 3
+}
+
+put {
+  url: http://127.0.0.1:8001/api/v1/admin/sub_uom/update?uu_id=21159ac0-8188-4b14-9101-0d5a9fe38caa
+  body: formUrlEncoded
+  auth: bearer
+}
+
+params:query {
+  uu_id: 21159ac0-8188-4b14-9101-0d5a9fe38caa
+}
+
+auth:bearer {
+  token: {{access_token}}
+}
+
+body:form-urlencoded {
+  uom_id: 2
+  sub_uom_name: grams
+  sub_uom_short_name: gms
+  conversion_factor: 20000
+  description: gramss
+  is_active: true
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

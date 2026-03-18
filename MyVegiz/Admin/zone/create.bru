@@ -5,7 +5,7 @@ meta {
 }
 
 post {
-  url: http://127.0.0.1:8000/api/v1/admin/zone/create
+  url: http://127.0.0.1:8001/api/v1/admin/zone/create
   body: multipartForm
   auth: bearer
 }
@@ -15,9 +15,8 @@ auth:bearer {
 }
 
 body:multipart-form {
-  zone_name: Vivekanad area
+  zone_name: demo
   city: Kolhapur
-  state: Maharashtra
   polygon: '''
     [
         {
@@ -46,6 +45,7 @@ body:multipart-form {
         }
     ]
   '''
+  ~state: Maharashtra
   ~is_deliverable: true
 }
 
