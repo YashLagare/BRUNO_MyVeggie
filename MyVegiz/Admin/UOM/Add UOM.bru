@@ -5,7 +5,7 @@ meta {
 }
 
 post {
-  url: http://127.0.0.1:8000/api/v1/admin/uoms/create
+  url: {{base_url2}}/admin/uoms/create
   body: formUrlEncoded
   auth: bearer
 }
@@ -15,8 +15,8 @@ auth:bearer {
 }
 
 body:form-urlencoded {
-  uom_name: Abcdf
-  uom_short_name: Abcd
+  uom_name: KG
+  uom_short_name: kilo gram
   ~description: 
 }
 

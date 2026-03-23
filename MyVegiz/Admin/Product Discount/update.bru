@@ -1,0 +1,32 @@
+meta {
+  name: update
+  type: http
+  seq: 3
+}
+
+put {
+  url: {{base_url2}}/admin/product/discount/update?uu_id=1120589b-fd21-4cc9-b448-e68565e164d1
+  body: formUrlEncoded
+  auth: bearer
+}
+
+params:query {
+  uu_id: 1120589b-fd21-4cc9-b448-e68565e164d1
+}
+
+auth:bearer {
+  token: {{access_token}}
+}
+
+body:form-urlencoded {
+  discount_value: 30
+  cap_limit: 3
+  start_date: 2026-03-23T00:00:00
+  end_date: 2026-04-29T23:59:59
+  is_active: true
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

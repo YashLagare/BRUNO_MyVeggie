@@ -5,7 +5,7 @@ meta {
 }
 
 post {
-  url: http://127.0.0.1:8001/api/v1/admin/sub_uom/create
+  url: {{base_url2}}/admin/sub_uom/create
   body: formUrlEncoded
   auth: bearer
 }
@@ -15,9 +15,9 @@ auth:bearer {
 }
 
 body:form-urlencoded {
-  uom_id: 2
-  sub_uom_name: demo
-  sub_uom_short_name: demo
+  uom_id: 23
+  sub_uom_name: gram
+  sub_uom_short_name: gram
   conversion_factor: 2
 }
 

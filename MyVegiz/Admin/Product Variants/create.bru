@@ -5,7 +5,7 @@ meta {
 }
 
 post {
-  url: http://127.0.0.1:8000/api/v1/admin/product-variants/bulk-create
+  url: {{base_url2}}/admin/product-variants/bulk-create
   body: json
   auth: bearer
 }
@@ -16,11 +16,11 @@ auth:bearer {
 
 body:json {
   {
-    "product_id": 50,
+    "product_id": 400,
     "variants": [
       {
-        "zone_id": 7,
-        "uom_id": 2,
+        "zone_id": 16,
+        "sub_uom_id": 5,
         "quantity":2,
         "actual_price": 120,
         "selling_price": 100,

@@ -1,13 +1,17 @@
 meta {
-  name: uom dropdown
+  name: List (ACTIVE DISCOUNT for product_variant)
   type: http
-  seq: 6
+  seq: 5
 }
 
 get {
-  url: http://127.0.0.1:8000/api/v1/admin/product-variants/uoms
+  url: {{base_url2}}/admin/product/discount/active/31
   body: none
   auth: bearer
+}
+
+params:query {
+  ~q: discount
 }
 
 auth:bearer {

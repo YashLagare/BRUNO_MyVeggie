@@ -1,0 +1,29 @@
+meta {
+  name: create
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{base_url2}}/admin/product/discount/create
+  body: formUrlEncoded
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{access_token}}
+}
+
+body:form-urlencoded {
+  variant_uu_id: 2c91b055-327a-4b3f-92a9-06b68e8e5e5a
+  discount_value: 21
+  cap_limit: 3
+  start_date: 2026-03-24T00:00:00
+  end_date: 2026-05-01T23:59:59
+  is_active: true
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

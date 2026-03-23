@@ -1,13 +1,19 @@
 meta {
-  name: Home Section dropdown
+  name: List
   type: http
-  seq: 7
+  seq: 2
 }
 
 get {
-  url: {{base_url2}}/admin/products/dropdown/homesection
+  url: {{base_url2}}/admin/product/discount/list?page=1&limit=10
   body: none
   auth: bearer
+}
+
+params:query {
+  page: 1
+  limit: 10
+  ~q: discount
 }
 
 auth:bearer {
