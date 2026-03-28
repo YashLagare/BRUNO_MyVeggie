@@ -1,0 +1,30 @@
+meta {
+  name: update
+  type: http
+  seq: 3
+}
+
+put {
+  url: {{base_url2}}/admin/slot/update?uu_id=8ea1e3da-3e8b-480b-a5a5-849a3df5105e
+  body: formUrlEncoded
+  auth: bearer
+}
+
+params:query {
+  uu_id: 8ea1e3da-3e8b-480b-a5a5-849a3df5105e
+}
+
+auth:bearer {
+  token: {{access_token}}
+}
+
+body:form-urlencoded {
+  start_time: 12:00
+  end_time: 14:00
+  is_active: true
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
