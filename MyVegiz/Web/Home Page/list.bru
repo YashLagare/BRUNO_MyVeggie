@@ -5,7 +5,7 @@ meta {
 }
 
 get {
-  url: {{base_url2}}/web/homepage/?main_category_slug=grocery-vegetables&lat=16.695083374702104&lng=74.20434800272267&home_tab_slug=fruitsss&q=Dragon
+  url: {{base_url2}}/web/homepage/?main_category_slug=grocery-vegetables&lat=16.695083374702104&lng=74.20434800272267&home_tab_slug=fruitsss
   body: none
   auth: bearer
 }
@@ -15,7 +15,8 @@ params:query {
   lat: 16.695083374702104
   lng: 74.20434800272267
   home_tab_slug: fruitsss
-  q: Dragon
+  ~q: Dragon
+  ~: 
 }
 
 auth:bearer {

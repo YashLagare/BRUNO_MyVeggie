@@ -5,13 +5,18 @@ meta {
 }
 
 post {
-  url: {{base_url2}}/admin/email-settings
+  url: {{base_url2}}/admin/order/settings
   body: multipartForm
   auth: bearer
 }
 
 auth:bearer {
   token: {{access_token}}
+}
+
+body:multipart-form {
+  is_cod_enabled: true
+  is_online_enabled: true
 }
 
 settings {
