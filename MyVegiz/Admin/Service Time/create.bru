@@ -5,7 +5,7 @@ meta {
 }
 
 post {
-  url: {{base_url2}}/admin/slot/create
+  url: {{base_url2}}/admin/service/time/create
   body: formUrlEncoded
   auth: bearer
 }
@@ -15,9 +15,9 @@ auth:bearer {
 }
 
 body:form-urlencoded {
-  start_time: 17:00
-  end_time: 18:00
-  is_active: false
+  service_start_time: 15:00
+  service_end_time: 20:00
+  is_active: true
 }
 
 settings {

@@ -1,0 +1,30 @@
+meta {
+  name: update
+  type: http
+  seq: 3
+}
+
+put {
+  url: {{base_url2}}/admin/service/time/update?uu_id=888dff65-e3cf-4434-a640-4c6e6bd19e69
+  body: formUrlEncoded
+  auth: bearer
+}
+
+params:query {
+  uu_id: 888dff65-e3cf-4434-a640-4c6e6bd19e69
+}
+
+auth:bearer {
+  token: {{access_token}}
+}
+
+body:form-urlencoded {
+  service_start_time: 12:00
+  service_end_time: 18:00
+  is_active: true
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
