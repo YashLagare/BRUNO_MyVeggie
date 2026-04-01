@@ -1,0 +1,39 @@
+meta {
+  name: update
+  type: http
+  seq: 2
+}
+
+put {
+  url: {{base_url2}}/web/profile/address/update?uu_id=c929a4e0-2633-4e23-8d04-c4df12545397
+  body: json
+  auth: bearer
+}
+
+params:query {
+  uu_id: c929a4e0-2633-4e23-8d04-c4df12545397
+}
+
+auth:bearer {
+  token: {{web_access_token}}
+}
+
+body:json {
+  {
+    "label": "Home",
+    "delivery_name": "John Does",
+    "delivery_phone": "9876543210",
+    "address_line": "Flat 101, Green Residency",
+    "landmark": "Near Temple",
+    "city": "Surat",
+    "pincode": "395007",
+    "lat": 16.695083374702104,
+    "lng": 74.20434800272267,
+    "is_default": true
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

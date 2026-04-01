@@ -1,0 +1,35 @@
+meta {
+  name: add
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{base_url2}}/web/profile/address/add
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{web_access_token}}
+}
+
+body:json {
+  {
+    "label": "Office",
+    "delivery_name": "John Doe",
+    "delivery_phone": "9376543290",
+    "address_line": "Flat 12, Red Residency",
+    "landmark": "Near HighSchool",
+    "city": "Pune",
+    "pincode": "876543",
+    "lat": 67.695083374702104,
+    "lng": 78.20434800272267,
+    "is_default": false
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

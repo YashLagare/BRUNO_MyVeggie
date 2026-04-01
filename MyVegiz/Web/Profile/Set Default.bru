@@ -1,0 +1,24 @@
+meta {
+  name: Set Default
+  type: http
+  seq: 5
+}
+
+put {
+  url: {{base_url2}}/web/profile/address/set-default?uu_id=b8450c6c-0351-4aa6-be66-ba950db9c367
+  body: json
+  auth: bearer
+}
+
+params:query {
+  uu_id: b8450c6c-0351-4aa6-be66-ba950db9c367
+}
+
+auth:bearer {
+  token: {{web_access_token}}
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

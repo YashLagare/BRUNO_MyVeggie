@@ -1,11 +1,11 @@
 meta {
-  name: Update
+  name: place order
   type: http
-  seq: 3
+  seq: 1
 }
 
-put {
-  url: {{base_url2}}/web/cart/update
+post {
+  url: {{base_url2}}/web/orders/place
   body: json
   auth: bearer
 }
@@ -21,8 +21,9 @@ auth:bearer {
 
 body:json {
   {
-    "cart_item_id": 19,
-    "quantity": 4
+    "payment_mode": "COD",
+    "address_uu_id": "7f0b1bb8-9d38-4f71-9295-e1c51276c3e1",
+    "customer_note": "Please deliver fast"
   }
 }
 

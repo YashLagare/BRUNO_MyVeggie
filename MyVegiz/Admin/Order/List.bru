@@ -1,19 +1,19 @@
 meta {
   name: List
   type: http
-  seq: 6
+  seq: 1
 }
 
 get {
-  url: {{base_url2}}/admin/products/list?limit=10&page=1
+  url: {{base_url2}}/admin/orders/list?page=1&limit=10
   body: none
   auth: bearer
 }
 
 params:query {
-  limit: 10
   page: 1
-  ~q: Home Centre Solid Cushion Cover
+  limit: 10
+  ~q: 12:00
 }
 
 auth:bearer {

@@ -1,19 +1,17 @@
 meta {
-  name: List
+  name: Detail
   type: http
-  seq: 6
+  seq: 2
 }
 
 get {
-  url: {{base_url2}}/admin/products/list?limit=10&page=1
+  url: {{base_url2}}/admin/orders/detail?uu_id=2ecbc4a9-10b0-4f7f-9228-c4384fffc000
   body: none
   auth: bearer
 }
 
 params:query {
-  limit: 10
-  page: 1
-  ~q: Home Centre Solid Cushion Cover
+  uu_id: 2ecbc4a9-10b0-4f7f-9228-c4384fffc000
 }
 
 auth:bearer {

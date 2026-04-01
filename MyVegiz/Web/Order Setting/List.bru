@@ -1,11 +1,11 @@
 meta {
-  name: Update
+  name: List
   type: http
-  seq: 3
+  seq: 1
 }
 
-put {
-  url: {{base_url2}}/web/cart/update
+get {
+  url: {{base_url2}}/web/order_settings/list
   body: json
   auth: bearer
 }
@@ -17,13 +17,6 @@ params:query {
 
 auth:bearer {
   token: {{web_access_token}}
-}
-
-body:json {
-  {
-    "cart_item_id": 19,
-    "quantity": 4
-  }
 }
 
 settings {

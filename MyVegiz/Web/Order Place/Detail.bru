@@ -1,0 +1,24 @@
+meta {
+  name: Detail
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{base_url2}}/web/orders/detail?uu_id=c2de7af9-82d5-4f1a-8004-8ad6062b1f1f
+  body: json
+  auth: bearer
+}
+
+params:query {
+  uu_id: c2de7af9-82d5-4f1a-8004-8ad6062b1f1f
+}
+
+auth:bearer {
+  token: {{web_access_token}}
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
