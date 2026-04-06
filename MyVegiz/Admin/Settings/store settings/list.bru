@@ -1,22 +1,17 @@
 meta {
-  name: update
+  name: list
   type: http
-  seq: 3
+  seq: 2
 }
 
-put {
-  url: {{base_url2}}/admin/order/settings
+get {
+  url: {{base_url2}}/admin/store_settings
   body: multipartForm
   auth: bearer
 }
 
 auth:bearer {
   token: {{access_token}}
-}
-
-body:multipart-form {
-  ~is_cod_enabled: true
-  ~is_online_enabled: flase
 }
 
 settings {

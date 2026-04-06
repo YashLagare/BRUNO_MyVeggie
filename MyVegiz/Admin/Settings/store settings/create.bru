@@ -1,11 +1,11 @@
 meta {
-  name: update
+  name: create
   type: http
-  seq: 3
+  seq: 1
 }
 
-put {
-  url: {{base_url2}}/admin/order/settings
+post {
+  url: {{base_url2}}/admin/store_settings
   body: multipartForm
   auth: bearer
 }
@@ -15,8 +15,9 @@ auth:bearer {
 }
 
 body:multipart-form {
-  ~is_cod_enabled: true
-  ~is_online_enabled: flase
+  store_name: Main Store
+  store_lat: 16.6709599701602
+  store_lng: 74.22628283500673
 }
 
 settings {

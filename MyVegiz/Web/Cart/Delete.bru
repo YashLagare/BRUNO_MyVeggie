@@ -7,7 +7,7 @@ meta {
 delete {
   url: {{base_url2}}/web/cart/remove/2
   body: json
-  auth: bearer
+  auth: none
 }
 
 params:query {
@@ -15,8 +15,8 @@ params:query {
   ~lng: 74.20434800272267
 }
 
-auth:bearer {
-  token: {{web_access_token}}
+headers {
+  X-Guest-Token: guest-abc-123-def-456
 }
 
 settings {

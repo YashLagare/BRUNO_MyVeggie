@@ -7,7 +7,7 @@ meta {
 post {
   url: {{base_url2}}/web/cart/add
   body: json
-  auth: bearer
+  auth: none
 }
 
 params:query {
@@ -15,16 +15,16 @@ params:query {
   ~lng: 74.20434800272267
 }
 
-auth:bearer {
-  token: {{web_access_token}}
+headers {
+  X-Guest-Token: guest-abc-123-def-105
 }
 
 body:json {
   {
-    "product_variant_id": 35,
-    "quantity": 2,
-    "lat": 16.695083374702104,
-    "lng": 74.20434800272267
+    "product_variant_id": 36,
+    "quantity": 1,
+    "lat": 16.69367787849783,
+    "lng": 74.21541452407838
   }
 }
 

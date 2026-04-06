@@ -1,0 +1,24 @@
+meta {
+  name: Validate Address
+  type: http
+  seq: 6
+}
+
+get {
+  url: {{base_url2}}/web/cart/validate_address?address_uu_id=7f0b1bb8-9d38-4f71-9295-e1c51276c3e1
+  body: json
+  auth: bearer
+}
+
+params:query {
+  address_uu_id: 7f0b1bb8-9d38-4f71-9295-e1c51276c3e1
+}
+
+auth:bearer {
+  token: {{web_access_token}}
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

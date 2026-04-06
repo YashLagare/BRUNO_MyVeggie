@@ -15,8 +15,19 @@ params:query {
   ~lng: 74.20434800272267
 }
 
+headers {
+  X-Guest-Token: guest-abc-123-def-105
+}
+
 auth:bearer {
   token: {{web_access_token}}
+}
+
+body:json {
+  {
+    "lat": 16.69367787849783,
+    "lng": 74.21541452407838
+  }
 }
 
 settings {
