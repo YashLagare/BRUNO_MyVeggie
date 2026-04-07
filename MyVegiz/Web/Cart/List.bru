@@ -5,29 +5,22 @@ meta {
 }
 
 get {
-  url: {{base_url2}}/web/cart/list
+  url: {{base_url2}}/web/cart/list?lat=16.69367787849783&lng=74.21541452407838
   body: json
   auth: bearer
 }
 
 params:query {
-  ~lat: 16.695083374702104
-  ~lng: 74.20434800272267
+  lat: 16.69367787849783
+  lng: 74.21541452407838
 }
 
 headers {
-  X-Guest-Token: guest-abc-123-def-105
+  ~X-Guest-Token: 4c21b5ab-20f7-4232-a553-ab2ff2184b9a
 }
 
 auth:bearer {
   token: {{web_access_token}}
-}
-
-body:json {
-  {
-    "lat": 16.69367787849783,
-    "lng": 74.21541452407838
-  }
 }
 
 settings {

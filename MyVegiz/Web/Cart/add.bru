@@ -7,7 +7,7 @@ meta {
 post {
   url: {{base_url2}}/web/cart/add
   body: json
-  auth: none
+  auth: bearer
 }
 
 params:query {
@@ -16,7 +16,11 @@ params:query {
 }
 
 headers {
-  X-Guest-Token: guest-abc-123-def-105
+  ~X-Guest-Token: guest-abc-123-def-115
+}
+
+auth:bearer {
+  token: {{web_access_token}}
 }
 
 body:json {

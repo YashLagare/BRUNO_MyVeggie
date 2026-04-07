@@ -7,16 +7,16 @@ meta {
 post {
   url: {{base_url2}}/web/auth/send-otp
   body: json
-  auth: bearer
+  auth: none
 }
 
-auth:bearer {
-  token: 
+headers {
+  X-Guest-Token: guest-abc-123-def-115
 }
 
 body:json {
   {
-    "mobile": "8790876543"
+    "mobile": "8865436770"
   }
 }
 
