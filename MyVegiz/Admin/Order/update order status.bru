@@ -5,13 +5,13 @@ meta {
 }
 
 put {
-  url: {{base_url2}}/admin/orders/update-status?uu_id=d759d873-e28d-4dac-b7f3-a5ba48f31741
+  url: {{base_url2}}/admin/orders/update-status?uu_id=8cee45c6-edf9-401b-8cb4-fd59e0dd67dd
   body: json
   auth: bearer
 }
 
 params:query {
-  uu_id: d759d873-e28d-4dac-b7f3-a5ba48f31741
+  uu_id: 8cee45c6-edf9-401b-8cb4-fd59e0dd67dd
 }
 
 auth:bearer {
@@ -20,8 +20,8 @@ auth:bearer {
 
 body:json {
   {
-    "order_status": "PICKED_UP",
-    "note": "Delivery partner picked up the order"
+    "order_status": "REJECTED",
+    "note": "Order REJECTED"
   }
 }
 
