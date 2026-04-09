@@ -1,0 +1,24 @@
+meta {
+  name: delete
+  type: http
+  seq: 4
+}
+
+delete {
+  url: {{base_url2}}/admin/vendor/delete?uu_id=7e01428c-e666-458b-96a1-ddec922c3dca
+  body: none
+  auth: bearer
+}
+
+params:query {
+  uu_id: 7e01428c-e666-458b-96a1-ddec922c3dca
+}
+
+auth:bearer {
+  token: {{access_token}}
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

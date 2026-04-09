@@ -1,0 +1,52 @@
+meta {
+  name: create
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{base_url2}}/admin/vendor/create
+  body: multipartForm
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{access_token}}
+}
+
+body:multipart-form {
+  first_name: shruti
+  last_name: patil
+  entity_name: Vegiz Kitchen
+  owner_contact: 8877665544
+  entity_category: Restaurant
+  city: Kolhapur
+  area: Rohini
+  address: Mahalaxmi Automotives Pvt Ltd, Sr No 458/1, Gokhale Rd, opp. Om Super Market, Model Colony, Shivajinagar, Pune, Maharashtra 411016, India
+  fssai_number: 123456
+  lat: 18.533023
+  lng: 73.834768
+  cuisines_served: Indian,Chinese
+  delivery_packaging_type: Product Wise
+  delivery_packaging_price: 5
+  gst_applicable: true
+  gst_number: GST123
+  entity_image: @file(C:\Users\Admin\Downloads\coconut oil.png)
+  gst_image: @file(C:\Users\Admin\Downloads\rice.png)
+  fssai_image: @file(C:\Users\Admin\Downloads\organic_basmati_rice.png)
+  middle_name: sandip
+  entity_contact: 6677556677
+  beneficiary_name: demo
+  bank_name: BOM
+  account_number: 334455667788
+  ifsc_code: BOM123
+  is_serviceable: true
+  is_popular: true
+  tags: Popular,Best Seller,Offer
+  ~: 
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

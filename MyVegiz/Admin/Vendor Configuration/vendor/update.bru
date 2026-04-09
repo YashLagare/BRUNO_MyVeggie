@@ -1,0 +1,56 @@
+meta {
+  name: update
+  type: http
+  seq: 3
+}
+
+put {
+  url: {{base_url2}}/admin/vendor/update?uu_id=427dfafc-0f37-4ee6-ac0e-3de1c648ed3c
+  body: multipartForm
+  auth: bearer
+}
+
+params:query {
+  uu_id: 427dfafc-0f37-4ee6-ac0e-3de1c648ed3c
+}
+
+auth:bearer {
+  token: {{access_token}}
+}
+
+body:multipart-form {
+  first_name: shrutiii
+  middle_name: sandippp
+  last_name: patilll
+  entity_name: Vegiz Kitchens
+  entity_image: @file(C:\Users\Admin\Downloads\kiwi.png)
+  entity_contact: 6677556600
+  entity_category: Restaurants
+  owner_contact: 8766554400
+  city: Kolhapurs
+  area: Rankala
+  address: Maha Automotives Pvt Ltd, Sr No 458/1, Gokhale Rd, opp. Om Super Market, Model Colony, Shivajinagar, Pune, Maharashtra 411016, India
+  fssai_number: 1234500
+  fssai_image: @file(C:\Users\Admin\Downloads\Anjeer.png)
+  lat: 16.69367787849783
+  lng: 74.21541452407838
+  cuisines_served: Indian
+  delivery_packaging_type: Cart Wise
+  delivery_packaging_price: 10
+  gst_applicable: false
+  gst_number: GST1234
+  gst_image: @file(C:\Users\Admin\Downloads\chocolate_pastry.png)
+  beneficiary_name: demos
+  bank_name: BOMs
+  account_number: 33445566778800
+  ifsc_code: BOM1234
+  is_serviceable: false
+  is_popular: false
+  tags: Popular
+  ~: 
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

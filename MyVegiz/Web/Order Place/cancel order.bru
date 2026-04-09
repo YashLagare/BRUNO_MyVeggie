@@ -1,0 +1,32 @@
+meta {
+  name: cancel order
+  type: http
+  seq: 4
+}
+
+post {
+  url: {{base_url2}}/web/orders/cancel
+  body: json
+  auth: bearer
+}
+
+params:query {
+  ~lat: 16.695083374702104
+  ~lng: 74.20434800272267
+}
+
+auth:bearer {
+  token: {{web_access_token}}
+}
+
+body:json {
+  {
+    "uu_id": "36ee0c5d-1fd3-4558-8327-2082613453b1",
+    "note": "Changed my mind"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
