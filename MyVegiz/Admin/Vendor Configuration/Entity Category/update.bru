@@ -1,0 +1,30 @@
+meta {
+  name: update
+  type: http
+  seq: 3
+}
+
+put {
+  url: {{base_url2}}/admin/entitycategory/update?uu_id=da479c25-7201-468d-b859-be50f3aa5f02
+  body: multipartForm
+  auth: bearer
+}
+
+params:query {
+  uu_id: da479c25-7201-468d-b859-be50f3aa5f02
+}
+
+auth:bearer {
+  token: {{access_token}}
+}
+
+body:multipart-form {
+  entity_category: Restaurant
+  main_category_id: 1
+  ~is_active: true
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
