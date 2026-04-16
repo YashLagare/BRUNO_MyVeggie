@@ -1,0 +1,21 @@
+meta {
+  name: category
+  type: http
+  seq: 1
+}
+
+get {
+  url: http://127.0.0.1:8001/api/v1/redis/categories/list_cached?limit=10&page =2
+  body: none
+  auth: inherit
+}
+
+params:query {
+  limit: 10
+  "page ": 2
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

@@ -5,7 +5,7 @@ meta {
 }
 
 post {
-  url: {{base_url2}}/admin/vendor/create
+  url: {{base_url2}}/admin/entitycategory/create
   body: multipartForm
   auth: bearer
 }
@@ -15,8 +15,8 @@ auth:bearer {
 }
 
 body:multipart-form {
-  entity_category: ABC
-  main_category_id: 17
+  entity_category: Restaurant
+  main_category_id: 12
 }
 
 settings {
