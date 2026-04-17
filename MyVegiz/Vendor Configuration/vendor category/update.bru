@@ -1,0 +1,30 @@
+meta {
+  name: update
+  type: http
+  seq: 3
+}
+
+put {
+  url: {{base_url2}}/vendor/categories/update?uu_id=9ca762b9-4d30-4fe5-b709-b1064514ff70
+  body: multipartForm
+  auth: bearer
+}
+
+params:query {
+  uu_id: 9ca762b9-4d30-4fe5-b709-b1064514ff70
+}
+
+auth:bearer {
+  token: {{access_token}}
+}
+
+body:multipart-form {
+  vendor_category_name: restaurants
+  image: @file(C:\Users\Admin\Downloads\restaurant.png)
+  is_active: false
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

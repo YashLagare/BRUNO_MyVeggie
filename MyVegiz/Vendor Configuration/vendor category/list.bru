@@ -1,18 +1,13 @@
 meta {
-  name: List
+  name: list
   type: http
   seq: 2
 }
 
 get {
-  url: {{base_url2}}/admin/entitycategory/list?page=1&limit=10
+  url: {{base_url2}}/vendor/categories/list
   body: none
   auth: bearer
-}
-
-params:query {
-  page: 1
-  limit: 10
 }
 
 auth:bearer {
