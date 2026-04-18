@@ -1,0 +1,20 @@
+meta {
+  name: polygons
+  type: http
+  seq: 6
+}
+
+get {
+  url: {{base_url2}}/vendor/vendor/polygons
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{access_token}}
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
