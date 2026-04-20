@@ -1,0 +1,24 @@
+meta {
+  name: remove coupon
+  type: http
+  seq: 8
+}
+
+delete {
+  url: {{base_url2}}/web/cart/remove-coupon
+  body: json
+  auth: bearer
+}
+
+headers {
+  ~X-Guest-Token: guest-abc-123-def-115
+}
+
+auth:bearer {
+  token: {{web_access_token}}
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

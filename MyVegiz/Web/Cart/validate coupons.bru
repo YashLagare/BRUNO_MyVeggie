@@ -1,22 +1,21 @@
 meta {
-  name: Delete
+  name: validate coupons
   type: http
-  seq: 4
+  seq: 10
 }
 
-delete {
-  url: {{base_url2}}/web/cart/remove/148
+get {
+  url: {{base_url2}}/web/cart/validate?code=Coupon@450
   body: json
   auth: bearer
 }
 
 params:query {
-  ~lat: 16.695083374702104
-  ~lng: 74.20434800272267
+  code: Coupon@450
 }
 
 headers {
-  ~X-Guest-Token: guest-abc-123-def-456
+  ~X-Guest-Token: 4c21b5ab-20f7-4232-a553-ab2ff2184b9a
 }
 
 auth:bearer {

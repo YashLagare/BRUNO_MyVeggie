@@ -1,0 +1,24 @@
+meta {
+  name: available coupons
+  type: http
+  seq: 10
+}
+
+get {
+  url: {{base_url2}}/web/cart/available-coupons
+  body: json
+  auth: bearer
+}
+
+headers {
+  ~X-Guest-Token: 4c21b5ab-20f7-4232-a553-ab2ff2184b9a
+}
+
+auth:bearer {
+  token: {{web_access_token}}
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

@@ -1,22 +1,21 @@
 meta {
-  name: Delete
+  name: apply coupon
   type: http
-  seq: 4
+  seq: 7
 }
 
-delete {
-  url: {{base_url2}}/web/cart/remove/148
+post {
+  url: {{base_url2}}/web/cart/apply-coupon?coupon_code=Coupon@450
   body: json
   auth: bearer
 }
 
 params:query {
-  ~lat: 16.695083374702104
-  ~lng: 74.20434800272267
+  coupon_code: Coupon@450
 }
 
 headers {
-  ~X-Guest-Token: guest-abc-123-def-456
+  ~X-Guest-Token: guest-abc-123-def-115
 }
 
 auth:bearer {

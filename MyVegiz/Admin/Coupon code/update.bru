@@ -5,13 +5,13 @@ meta {
 }
 
 put {
-  url: {{base_url2}}/admin/coupon_code/update?uu_id=37fe5369-7cdb-4b45-9a43-a18be6f0d31d
+  url: {{base_url2}}/admin/coupon_code/update?uu_id=285bf1ef-f3e3-430e-bc67-dda9a75f9bb2
   body: formUrlEncoded
   auth: bearer
 }
 
 params:query {
-  uu_id: 37fe5369-7cdb-4b45-9a43-a18be6f0d31d
+  uu_id: 285bf1ef-f3e3-430e-bc67-dda9a75f9bb2
 }
 
 auth:bearer {
@@ -19,7 +19,7 @@ auth:bearer {
 }
 
 body:form-urlencoded {
-  coupon_code: SAVE62
+  coupon_code: SAVE789
   coupon_type: flat
   disc_value: 62
   order_value: 300
@@ -28,6 +28,7 @@ body:form-urlencoded {
   is_active: true
   use_limit: 10
   expiry_date: 2026-12-31T23:59:59+05:30
+  per_user_limit: 1
   ~cap_limit: 20
 }
 
