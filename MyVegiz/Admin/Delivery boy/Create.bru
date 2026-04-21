@@ -1,0 +1,31 @@
+meta {
+  name: Create
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{base_url2}}/admin/deliveryboys/create
+  body: formUrlEncoded
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{access_token}}
+}
+
+body:form-urlencoded {
+  name: Demo
+  phone: 9076543210
+  "email ": rahul@gmail.com
+  password: 12345678
+  vehicle_type: bike
+  "vehicle_number ": GJ01AB1234
+  "is_active ": true
+  "is_available ": true
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

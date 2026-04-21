@@ -1,0 +1,35 @@
+meta {
+  name: Update
+  type: http
+  seq: 3
+}
+
+put {
+  url: {{base_url2}}/admin/deliveryboys/update?uu_id=b60f1744-d1ec-4731-bcfe-6dc79b9cdaff
+  body: formUrlEncoded
+  auth: bearer
+}
+
+params:query {
+  uu_id: b60f1744-d1ec-4731-bcfe-6dc79b9cdaff
+}
+
+auth:bearer {
+  token: {{access_token}}
+}
+
+body:form-urlencoded {
+  name: Rahul Kumar
+  phone: 9876543210
+  email: rahul@gmail.com
+  password: 12345678
+  vehicle_type: bike
+  vehicle_number: GJ01AB1234
+  is_active: true
+  is_available: true
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

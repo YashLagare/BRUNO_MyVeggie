@@ -1,0 +1,24 @@
+meta {
+  name: Delete
+  type: http
+  seq: 4
+}
+
+delete {
+  url: {{base_url2}}/admin/deliveryboys/delete?uu_id=679a762a-c983-4fe9-9fb6-f6742ba88036
+  body: none
+  auth: bearer
+}
+
+params:query {
+  uu_id: 679a762a-c983-4fe9-9fb6-f6742ba88036
+}
+
+auth:bearer {
+  token: {{access_token}}
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
