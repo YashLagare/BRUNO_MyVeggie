@@ -1,0 +1,26 @@
+meta {
+  name: delivery boys (Available)
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{base_url2}}/admin/delivery/boys/available?delivery_date=2026-04-22&slot_uu_id=d642cb80-d0aa-46d0-96b6-7f1181dcd769
+  body: none
+  auth: bearer
+}
+
+params:query {
+  delivery_date: 2026-04-22
+  slot_uu_id: d642cb80-d0aa-46d0-96b6-7f1181dcd769
+  : 
+}
+
+auth:bearer {
+  token: {{access_token}}
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

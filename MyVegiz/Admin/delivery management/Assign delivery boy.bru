@@ -1,0 +1,32 @@
+meta {
+  name: Assign delivery boy
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{base_url2}}/admin/delivery/assign
+  body: json
+  auth: bearer
+}
+
+params:query {
+  ~uu_id: 8cee45c6-edf9-401b-8cb4-fd59e0dd67dd
+}
+
+auth:bearer {
+  token: {{access_token}}
+}
+
+body:json {
+  {
+    "order_uu_id": "80dc2dd2-6e14-42db-957d-8156a3066f7a",
+    "delivery_boy_uu_id": "0adc4ea8-1198-470a-8618-38a0d58de390",
+    "note": "Handle with care"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

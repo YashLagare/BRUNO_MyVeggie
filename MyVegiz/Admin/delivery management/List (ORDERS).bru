@@ -1,0 +1,25 @@
+meta {
+  name: List (ORDERS)
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{base_url2}}/admin/delivery/orders?slot_uu_id=8ea1e3da-3e8b-480b-a5a5-849a3df5105e
+  body: none
+  auth: bearer
+}
+
+params:query {
+  slot_uu_id: 8ea1e3da-3e8b-480b-a5a5-849a3df5105e
+  ~delivery_date: 2026-04-22
+}
+
+auth:bearer {
+  token: {{access_token}}
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

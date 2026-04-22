@@ -1,17 +1,18 @@
 meta {
-  name: Detail
+  name: Available Slots
   type: http
-  seq: 3
+  seq: 5
 }
 
 get {
-  url: {{base_url2}}/web/orders/detail?uu_id=cad5ff76-55f9-4fc5-bafc-3771578cdcc4
+  url: {{base_url2}}/web/orders/slots/available
   body: json
   auth: bearer
 }
 
 params:query {
-  uu_id: cad5ff76-55f9-4fc5-bafc-3771578cdcc4
+  ~lat: 16.695083374702104
+  ~lng: 74.20434800272267
 }
 
 auth:bearer {
