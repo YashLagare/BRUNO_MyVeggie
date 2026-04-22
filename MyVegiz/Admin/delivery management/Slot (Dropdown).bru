@@ -1,0 +1,27 @@
+meta {
+  name: Slot (Dropdown)
+  type: http
+  seq: 5
+}
+
+get {
+  url: {{base_url2}}/admin/delivery/orders?delivery_date=2026-04-21&page=1&limit=10
+  body: none
+  auth: bearer
+}
+
+params:query {
+  delivery_date: 2026-04-21
+  page: 1
+  limit: 10
+  ~slot_uu_id: 8ea1e3da-3e8b-480b-a5a5-849a3df5105e
+}
+
+auth:bearer {
+  token: {{access_token}}
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
