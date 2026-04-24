@@ -1,0 +1,25 @@
+meta {
+  name: update
+  type: http
+  seq: 3
+}
+
+put {
+  url: {{base_url2}}/admin/delivery_boy/commissions
+  body: multipartForm
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{access_token}}
+}
+
+body:multipart-form {
+  per_km_commission: 5
+  is_active: true
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

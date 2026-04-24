@@ -1,0 +1,24 @@
+meta {
+  name: check
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{base_url2}}/web/favourites/check?product_id=1021
+  body: json
+  auth: bearer
+}
+
+params:query {
+  product_id: 1021
+}
+
+auth:bearer {
+  token: {{web_access_token}}
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

@@ -1,0 +1,20 @@
+meta {
+  name: list
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{base_url2}}/web/favourites/list
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{web_access_token}}
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
