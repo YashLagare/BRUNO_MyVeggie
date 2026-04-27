@@ -1,0 +1,23 @@
+meta {
+  name: login
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{base_url2}}/delivery_boy/auth/login
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "email":"rahul@gmail.com",
+      "password":"12345678"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

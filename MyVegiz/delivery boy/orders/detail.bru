@@ -1,0 +1,24 @@
+meta {
+  name: detail
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{base_url2}}/delivery_boy/orders/detail?uu_id=e1752801-5d53-473a-9e6d-9fad8f1b7a44
+  body: json
+  auth: bearer
+}
+
+params:query {
+  uu_id: e1752801-5d53-473a-9e6d-9fad8f1b7a44
+}
+
+auth:bearer {
+  token: {{delivery_access_token}}
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

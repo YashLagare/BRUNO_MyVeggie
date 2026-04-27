@@ -1,0 +1,28 @@
+meta {
+  name: update
+  type: http
+  seq: 1
+}
+
+put {
+  url: {{base_url2}}/delivery_boy/profile/update
+  body: multipartForm
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{delivery_access_token}}
+}
+
+body:multipart-form {
+  name: shruti patil
+  email: shrutipatil1088@gmail.com
+  phone: 9322019014
+  password: 12345678
+  profile_image: @file(C:\Users\Admin\Downloads\choco_pastry2.png)
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

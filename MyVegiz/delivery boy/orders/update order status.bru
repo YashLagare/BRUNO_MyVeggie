@@ -5,7 +5,7 @@ meta {
 }
 
 put {
-  url: {{base_url2}}/admin/orders/update-status?uu_id=80dc2dd2-6e14-42db-957d-8156a3066f7a
+  url: {{base_url2}}/delivery_boy/orders/update-status?uu_id=80dc2dd2-6e14-42db-957d-8156a3066f7a
   body: json
   auth: bearer
 }
@@ -15,13 +15,13 @@ params:query {
 }
 
 auth:bearer {
-  token: {{access_token}}
+  token: {{delivery_access_token}}
 }
 
 body:json {
   {
-    "order_status": "PREPARING",
-    "note": "Order PREPARING"
+    "order_status": "DELIVERED",
+    "note": "DELIVERED"
   }
 }
 

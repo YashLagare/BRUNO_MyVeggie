@@ -1,0 +1,21 @@
+meta {
+  name: logout
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{base_url2}}/delivery_boy/auth/logout
+  body: json
+  auth: inherit
+}
+
+headers {
+  Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkZWxpdmVyeV9ib3lfaWQiOjExLCJlbWFpbCI6InNocnV0aXBhdGlsMTA4OEBnbWFpbC5jb20iLCJuYW1lIjoic2hydXRpIiwicm9sZSI6ImRlbGl2ZXJ5X2JveSIsImV4cCI6MTc3NzA0ODI1N30.E6MWDI8-QvktFgE3GzYWYzMy5lQZC5Rsbm0C-UrKI48
+  refresh-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkZWxpdmVyeV9ib3lfaWQiOjExLCJlbWFpbCI6InNocnV0aXBhdGlsMTA4OEBnbWFpbC5jb20iLCJuYW1lIjoic2hydXRpIiwicm9sZSI6ImRlbGl2ZXJ5X2JveSIsImV4cCI6MTc3NzYyNDI1NywidHlwZSI6InJlZnJlc2gifQ.31j-ROFRdSR3tXWqXnd1oVaShXB0TkMc1gT51ZVrj08
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
