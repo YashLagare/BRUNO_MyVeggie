@@ -1,0 +1,30 @@
+meta {
+  name: settle
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{base_url2}}/admin/delivery_boy_wallet/settle?uu_id=b60f1744-d1ec-4731-bcfe-6dc79b9cdaff
+  body: json
+  auth: bearer
+}
+
+params:query {
+  uu_id: b60f1744-d1ec-4731-bcfe-6dc79b9cdaff
+}
+
+auth:bearer {
+  token: {{access_token}}
+}
+
+body:json {
+  {
+    "note": "Weekly settlement"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

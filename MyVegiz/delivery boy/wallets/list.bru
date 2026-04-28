@@ -5,7 +5,7 @@ meta {
 }
 
 get {
-  url: {{base_url2}}/delivery_boy/wallets?page=1&limit=10
+  url: {{base_url2}}/delivery_boy/wallets?page=1&limit=10&wallet_type=TRANSACTION
   body: none
   auth: bearer
 }
@@ -13,6 +13,7 @@ get {
 params:query {
   page: 1
   limit: 10
+  wallet_type: TRANSACTION
 }
 
 auth:bearer {
