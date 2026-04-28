@@ -5,9 +5,14 @@ meta {
 }
 
 get {
-  url: {{base_url2}}/admin/delivery_boy_wallet/list
+  url: {{base_url2}}/admin/delivery_boy_wallet/list?page =1&limit=20
   body: none
   auth: bearer
+}
+
+params:query {
+  "page ": 1
+  limit: 20
 }
 
 auth:bearer {
