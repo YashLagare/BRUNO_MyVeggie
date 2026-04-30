@@ -1,19 +1,13 @@
 meta {
-  name: User List
+  name: list
   type: http
   seq: 1
 }
 
 get {
-  url: {{base_url2}}/admin/users/list?page=1&limit=10
+  url: {{base_url2}}/admin/vegetable/grocery/dashboard
   body: none
   auth: bearer
-}
-
-params:query {
-  page: 1
-  limit: 10
-  ~q: anu
 }
 
 auth:bearer {
